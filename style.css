@@ -77,5 +77,123 @@ p.educationinfo {
 table.skill, th, td {
     text-align: center;
     vertical-align: middle;
-    margin: 1% 1% 1% 1%;
+    margin: 1% 0% 1% 0%;
   }
+  .Slider {
+    margin-left: auto;
+    margin-right: auto;
+	display: block;
+	position: relative;
+	width: 30%;
+	overflow: hidden;
+}
+.Slider .slides {
+	overflow: hidden;
+	overflow: hidden;
+	width: 100%;
+	height: 70vmin;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.Slider .slides > li {
+	width: 100%;
+	height: 70vmin;
+	position: absolute;
+	z-index: 1;
+	overflow: hidden;
+}
+.Slider .slides > li > img {
+	width: 100%;
+	height: auto;
+}
+
+.Slider .mini {
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.Slider .mini > li {
+	float: left;
+	width: 20%;
+}
+.Slider .mini > li > a {
+	display: block;
+}
+.Slider .mini > li > a > img {
+	width: 100%;
+	height: auto;
+}
+
+.Slider .slides li:target {
+	z-index: 3;
+	-webkit-animation: slide 1s 1;
+}
+.cssSlider .slides li:not(:target) {
+	-webkit-animation: hidden 1s 1;
+}
+@-webkit-keyframes slide {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+}
+@keyframes slide {
+	0% {
+		-webkit-transform: translateX(-100%);
+		        transform: translateX(-100%);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+}
+@-webkit-keyframes hidden {
+	0% {
+		z-index: 2;
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+	100% {
+		z-index: 2;
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+	}
+}
+@keyframes hidden {
+	0% {
+		z-index: 2;
+		-webkit-transform: translateX(0%);
+		        transform: translateX(0%);
+	}
+	100% {
+		z-index: 2;
+		-webkit-transform: translateX(100%);
+		        transform: translateX(100%);
+	}
+}
+.topbutton {
+    width:2.5em;
+    opacity: 0.3;
+    background:#3b3f4e;
+    text-align:center;
+    padding:10px;
+    position:fixed;
+    bottom:0.5em;
+    right:0.5em;
+    text-decoration: none;
+    color:#167faf;
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight:600;
+    font-size:2em;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    }
